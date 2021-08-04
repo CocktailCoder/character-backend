@@ -5,10 +5,10 @@
 #   Create Player Seed Info
   player_attributes = [
     {
-      name: "Bard", specialization: "Charisma"
+      name: "Monique Mcdaniel", specialization: "Sickest Rolls"
     },
     {
-      name: "Tank", specialization: "Strength"
+      name: "Earnest Pittman", specialization: "Never Breaks Character"
     }
   ]
   players = player_attributes.map do |attributes|
@@ -17,7 +17,9 @@
   #   Campaign Table Seed Info
   campaign_attributes = [
     {name: "Monster Campaign"},
-    {name: "Exploration Campaign"}
+    {name: "The Tomb of the Fallen Sky Queen"}
+    {name: "Shadow Realms and Where to Find Them"}
+    {name: "Dragon Fighting for Dummies"}
   ]
   
   campaign = campaign_attributes.map do |attributes|
@@ -40,9 +42,58 @@
     charisma: 6,
     personality: "Thoughtful",
     traits: "tolerance",
-    flaws: "flaws",
+    flaws: "poor sense of direction",
     equipment: "enchanted mithral chainmail"
-  } ]
+  },
+{
+    character_name: "Ørlef",
+    race: "Hill Dwarf",
+    class: "Druid",
+    alignment: "Lawful neutral",
+    strength: 6,
+    dexterity: 3,
+    constitution: 6,
+    intelligence: 1,
+    wisdom: 2,
+    charisma: 1,
+    personality: "",
+    traits: "Aggresive with anyone outside of his clan",
+    flaws: "Not the sharpest stonecutter..."
+    equipment: "Dwarven battle hammer (maternal)"
+  },
+{
+    character_name: "Slyyflynn",
+    race: "High Elf",
+    class: "Mage",
+    alignment: "True Good",
+    strength: 2,
+    dexterity: 6,
+    constitution: 3,
+    intelligence: 6,
+    wisdom: 5,
+    charisma: 0,
+    personality: "Extremely knowing, but bookish",
+    traits: "the tallest elf, ever",
+    flaws: "majorly lacking in social skills",
+    equipment: "The Staff of the Ancient Fallen"
+  },
+{
+    character_name: "Drmp",
+    race: "Half-troll",
+    class: "Theif",
+    alignment: "Chaotic evil",
+    strength: 3,
+    dexterity: 5,
+    constitution: 4,
+    intelligence: 1,
+    wisdom: 1,
+    charisma: 2,
+    personality: "Would be super scary and evil, but...",
+    traits: "the world's worst theif",
+    flaws: "...super super dumb",
+    equipment: "a burlap sack..?"
+  },
+ ]
   characters = character_attributes.map do |attributes|
     Character.create(attributes)
   end
