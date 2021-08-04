@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_160038) do
+ActiveRecord::Schema.define(version: 2021_08_04_014338) do
 
   create_table "campaigns", force: :cascade do |t|
     t.string "name"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_160038) do
   create_table "characters", force: :cascade do |t|
     t.string "character_name"
     t.string "race"
-    t.string "class"
+    t.string "character_class"
     t.string "alignment"
     t.integer "strength"
     t.integer "dexterity"
@@ -33,8 +33,6 @@ ActiveRecord::Schema.define(version: 2021_08_04_160038) do
     t.string "equipment"
     t.integer "campaign_id"
     t.integer "player_id"
-    t.index ["campaign_id"], name: "index_characters_on_campaign_id"
-    t.index ["player_id"], name: "index_characters_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
