@@ -15,8 +15,8 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
       t.string :traits
       t.string :flaws
       t.string :equipment
-      t.references :campaign
-      t.references :player
+      t.integer :campaign_id
+      t.integer :player_id
   end
 end
 end
