@@ -41,8 +41,8 @@
   traits: "tolerance",
   flaws: "poor sense of direction",
   equipment: "enchanted mithral chainmail",
-  campaign_id: 23, 
-  player_id: 24)
+  campaign_id: 1, 
+  player_id: 1)
   #   Character Seed Info
 #   character_attributes = [
 # {
