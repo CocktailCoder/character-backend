@@ -74,12 +74,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/new_character" do 
-    character = Character.create(
-      time: params[:time],
-      player_id: params[:player_id],
-      campaign_id: params[:campaign_id]
-    )
-    character.to_json(include: [:campaign, :player])
+    puts request.body
+    # character = Character.create(
+    #   player_id: params[:player_id],
+    #   campaign_id: params[:campaign_id]
+    # )
+    # character.to_json(include: [:campaign, :player])
   end
 
   patch "/characters/:id" do 
