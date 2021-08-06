@@ -117,4 +117,15 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  post '/login' do 
+    user = Player.find(:username => (params[:username]))
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect to "/player"
+    else
+      flash[:error] = "Player not found"
+      redirect to "/"
+    end
+  end
+
 end

@@ -5,10 +5,10 @@
 #   Create Player Seed Info
   player_attributes = [
     {
-      name: "Monique Mcdaniel", specialization: "Sickest Rolls"
+      username: "Nat20", name: "Monique Mcdaniel", specialization: "Sickest Rolls", password: "secret123"
     },
     {
-      name: "Earnest Pittman", specialization: "Never Breaks Character"
+      username: "LoreNerd78", name: "Earnest Pittman", specialization: "Never Breaks Character", password: "secret123"
     }
   ]
   players = player_attributes.map do |attributes|
