@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
 
   post "/new_player" do 
     player = Player.create(
-      name: params[:name], specialization: params[:specialization]
+      username: params[:username], password_digest: params[:password_digest]
     )
     
     player.to_json
@@ -49,7 +49,8 @@ class ApplicationController < Sinatra::Base
     Campaign.all.to_json
   end
 
-  post "/new_campaign" do
+  post "/new_campaign" do 
+    # console.log("************** WE'RE ON THE SERVER **************")
     campaign = Campaign.create(
       name: params[:name]
     )
@@ -74,12 +75,25 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/new_character" do 
+    
     character = Character.create(
-      time: params[:time],
-      player_id: params[:player_id],
-      campaign_id: params[:campaign_id]
-    )
-    character.to_json(include: [:campaign, :player])
+
+  character_name: params[:character_name],
+  race: params[:race],
+        character_class: params[:character_class],
+        alignment: params[:alignment],
+        strength: params[:strength],
+        dexterity: params[:dexterity],
+        constitution: params[:constitution],
+        intelligence: params[:intelligence],
+        wisdom: params[:wisdom],
+        charisma: params[:charisma],
+        personality: params[:personality],
+        traits: params[:traits],
+        flaws: params[:flaws],
+        equipment: params[:equipment],)
+   
+    character.to_json
   end
 
   patch "/characters/:id" do 

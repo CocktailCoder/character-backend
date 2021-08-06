@@ -14,6 +14,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt', '~> 3.1.7'
 gem 'tux'
+gem 'rack-cors'
 
 group :test do
   gem 'rspec'
